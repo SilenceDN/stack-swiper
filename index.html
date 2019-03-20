@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
+        <style>
+            .banner-wrapper {
+                position: relative;
+                border: 1px black solid;
+                height: 130px;
+                box-sizing: border-box;
+                overflow: hidden;
+            }
+            .banner-item {
+                position: absolute;
+                height: 150px;
+                top: 0;
+                bottom: 0;
+                left: 50%;
+                width: 85%;
+                margin: auto;
+                transition: all 0.2s ease-in 0s;
+                opacity: 1;
+                will-change: margin-left, tr;
+            }
+            .bg-img {
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                width: 100%;
+                height: 100%;
+                border-radius: 6px;
+            }
+
+            .shadow-blur {
+                position: relative;
+            }
+
+            .shadow-blur::before {
+                content: '';
+                display: block;
+                background: inherit;
+                filter: blur(10px);
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 10px;
+                left: 10px;
+                z-index: -1;
+                opacity: 0.4;
+                transform-origin: 0 0;
+                border-radius: inherit;
+                transform: scale(1, 1);
+            }
+        </style>
+    </head>
+    <body>
+        <section class="banner-wrapper"></section>
+        <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.slim.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>
